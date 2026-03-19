@@ -15,6 +15,11 @@
         margin: 0;
         padding: 0;
       }
+      @media (max-width: 768px) {
+        .main {
+          flex-direction: column;
+        }
+      }
       body {
         background-color: rgb(30, 88, 168);
         color: white;
@@ -315,6 +320,7 @@
       </nav>
     </header>
     <main>
+      <container class="main">
       <section class="firstSection">
         <div class="leftsection">
           Hello, My name is <span class="blue">Gurvinder</span>
@@ -481,6 +487,7 @@
 
   </div>
 </div>
+      </container>
     </main>
        <footer>
       <div class="footer">
