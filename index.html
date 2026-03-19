@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gurvinder's Portfolio</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(30, 88, 168);
+        color: white;
+        font-family: "Raleway", serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 86px;
+        background-color: rgb(18, 43, 147);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 25px;
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav ul li a:hover {
+        color: rgb(139, 139, 229);
+        font-size: 1.04rem;
+      }
+      main hr {
+        border: 0;
+        background-color: rgb(9, 9, 126);
+        height: 2.5px;
+        margin: 40px 0px;
+      }
+
+      .left {
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        align-items: center;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftsection {
+        font-size: 2.7rem;
+        margin: 100px 0;
+        align-items: center;
+      }
+      .rightsection img {
+        width: 80%;
+        margin: 25px 0;
+        float: right;
+      }
+      .blue {
+        font-weight: bolder;
+      }
+
+      #element {
+        color: rgb(8, 27, 102);
+        font-weight: bolder;
+      }
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondSection h1 {
+        font-size: 2rem;
+      }
+
+      footer {
+        background-color: rgb(10, 74, 164);
+        height: 110px;
+      }
+
+         footer ul li a {
+        text-decoration: none;
+        color: white;
+      }
+
+      footer ul li a:hover {
+        color: rgb(139, 139, 229);
+        font-size: 1.04rem;
+      }
+      .footer {
+        display: flex;
+        padding: 20px 250px;
+        gap: 9%;
+      }
+
+      .footer ul {
+        list-style: none;
+        float: right;
+        text-align: center;
+      }
+
+      footer .footer-rights {
+        text-align: center;
+      }
+
+      .container1 {
+        max-width: 650px;
+        margin: 10px 160px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        opacity: 0.7;
+        margin-bottom: 50px;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding-left: 30px;
+      }
+
+      /* Vertical line */
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 6px;
+        bottom: 0;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      /* Each item */
+      .item {
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      /* Circle dot */
+      .item::before {
+        content: "";
+        position: absolute;
+        left: -37px;
+        top: 6px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #fff;
+        border: 3px solid #2563b0;
+        outline: 2px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .date {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.65;
+        margin-bottom: 6px;
+      }
+
+      .role {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .company {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 10px;
+      }
+
+      .description {
+        font-size: 14px;
+        line-height: 1.7;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+
+      /* Divider between items */
+      .item:not(:last-child) {
+        padding-bottom: 10px;
+      }
+
+      .container2 {
+      max-width: 650px;
+      margin: 10px 160px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 50px;
+    }
+
+    /* Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    /* Card */
+    .cert-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 14px;
+      padding: 28px 18px 22px;
+      text-align: center;
+      transition: background 0.25s, transform 0.25s;
+      cursor: default;
+    }
+
+    .cert-card:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-4px);
+    }
+
+    /* Badge icon area */
+    .badge-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .badge-aws    { background: rgba(255,153,0,0.2);  border: 2px solid rgba(255,153,0,0.5); }
+    .badge-cisco  { background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.35); }
+
+    /* AWS hex-style SVG badge */
+    .badge-svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .cert-name {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .cert-issuer {
+      font-size: 11px;
+      opacity: 0.6;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .cert-level {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    .level-professional { background: rgba(255,153,0,0.25); color: #ffc04d; border: 1px solid rgba(255,153,0,0.4); }
+    .level-associate    { background: rgba(100,220,150,0.2);  color: #7de8aa; border: 1px solid rgba(100,220,150,0.4); }
+    .level-networking   { background: rgba(100,180,255,0.2);  color: #90caff; border: 1px solid rgba(100,180,255,0.4); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Gurvinder's Portfolio</div>
+        <div class="right"></div>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="leftsection">
+          Hello, My name is <span class="blue">Gurvinder</span>
+          <div>and I am a Enthusiastic</div>
+          <span id="element"></span>
+        </div>
+        <div class="rightsection">
+          <img src="bg.png" />
+        </div>
+      </section>
+<hr>
+      <div class="container1">
+        <h1>Work Experience</h1>
+        <p class="subtitle">My career journey so far</p>
+
+        <div class="timeline">
+          <div class="item">
+            <div class="date">2022 – 2025</div>
+            <div class="role">IT Support Engineer</div>
+            <div class="company">Amazon · Bolton, ON</div>
+            <p class="description">
+              Led full-scale network infrastructure deployments for multiple
+              Amazon fulfilment centre launches while maintaining 24/7 on-call
+              escalation support. Mentored team members and drove continuous
+              improvement initiatives in collaboration with cross-functional
+              teams and vendors. Moreover, engineered AWS and Python-based
+              automation solutions that slashed wireless downtime by 50%,
+              reduced change errors by 70%, and streamlined incident management
+              via ServiceNow-Slack integration
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="date">2022 – 2024</div>
+            <div class="role">IT Support Technician</div>
+            <div class="company">Amazon · Scarborough, ON</div>
+            <p class="description">
+              Designed and implemented IT onboarding documentation and
+              ServiceNow automation that significantly reduced staff workload by
+              70% and improved ticket accuracy by 60%. Applied ITIL-aligned
+              change management to optimize Cisco network configurations and
+              automated multi-OS laptop and desktop imaging, cutting support
+              requests by 35%. Additionally managed enterprise printer
+              deployments and tailored device configurations to align with
+              specific business workflows.
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="date">2020 – 2022</div>
+            <div class="role">IT Equipment Coordinator</div>
+            <div class="company">Amazon · Bolton, ON</div>
+            <p class="description">
+              Oversaw the full equipment lifecycle — from provisioning and
+              imaging to repairs and decommissioning — while coordinating with
+              IT, security, and operations teams to enforce hardware policies.
+              Managed vendor relationships for hardware procurement, RMA
+              processing, and issue resolution, ensuring seamless day-to-day
+              operations. Additionally supported high-priority launches and
+              special projects by leading large-scale equipment deployments
+              under tight deadlines.
+            </p>
+          </div>
+
+          <div class="item">
+            <div class="date">2019 – 2020</div>
+            <div class="role">Information Technology Help Desk</div>
+            <div class="company">St. Clair College · Windsor, ON</div>
+            <p class="description">
+              Delivered hands-on Tier 1 technical support to students, handling
+              the installation, modification, and repair of both software and
+              hardware. Also, contributed to process improvements by
+              streamlining repair workflows and standardizing support
+              procedures.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container2">
+  <h1>Certifications</h1>
+  <p class="subtitle">Industry-recognised credentials</p>
+
+  <div class="cert-grid">
+
+    <!-- AWS DevOps Professional -->
+    <div class="cert-card">
+      <div class="badge-icon badge-aws">
+        <svg class="badge-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#FF9900" stroke-width="4"/>
+          <text x="50" y="44" text-anchor="middle" fill="#FF9900" font-size="11" font-family="Inter,sans-serif" font-weight="700">AWS</text>
+          <text x="50" y="58" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">DevOps</text>
+          <text x="50" y="70" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">Pro</text>
+        </svg>
+      </div>
+      <div class="cert-name">AWS Certified DevOps Professional</div>
+      <div class="cert-issuer">Amazon Web Services</div>
+      <span class="cert-level level-professional">Professional</span>
+    </div>
+
+    <!-- AWS Solutions Architect -->
+    <div class="cert-card">
+      <div class="badge-icon badge-aws">
+        <svg class="badge-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#FF9900" stroke-width="4"/>
+          <text x="50" y="44" text-anchor="middle" fill="#FF9900" font-size="11" font-family="Inter,sans-serif" font-weight="700">AWS</text>
+          <text x="50" y="58" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">Solutions</text>
+          <text x="50" y="70" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">Architect</text>
+        </svg>
+      </div>
+      <div class="cert-name">AWS Certified Solutions Architect</div>
+      <div class="cert-issuer">Amazon Web Services</div>
+      <span class="cert-level level-associate">Associate</span>
+    </div>
+
+    <!-- AWS Developer -->
+    <div class="cert-card">
+      <div class="badge-icon badge-aws">
+        <svg class="badge-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#FF9900" stroke-width="4"/>
+          <text x="50" y="44" text-anchor="middle" fill="#FF9900" font-size="11" font-family="Inter,sans-serif" font-weight="700">AWS</text>
+          <text x="50" y="58" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">Developer</text>
+          <text x="50" y="70" text-anchor="middle" fill="#fff" font-size="8.5" font-family="Inter,sans-serif">Assoc.</text>
+        </svg>
+      </div>
+      <div class="cert-name">AWS Certified Developer</div>
+      <div class="cert-issuer">Amazon Web Services</div>
+      <span class="cert-level level-associate">Associate</span>
+    </div>
+
+    <!-- AWS CloudOps -->
+    <div class="cert-card">
+      <div class="badge-icon badge-aws">
+        <svg class="badge-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="none" stroke="#FF9900" stroke-width="4"/>
+          <text x="50" y="44" text-anchor="middle" fill="#FF9900" font-size="11" font-family="Inter,sans-serif" font-weight="700">AWS</text>
+          <text x="50" y="58" text-anchor="middle" fill="#fff" font-size="8" font-family="Inter,sans-serif">CloudOps</text>
+          <text x="50" y="70" text-anchor="middle" fill="#fff" font-size="8" font-family="Inter,sans-serif">Admin</text>
+        </svg>
+      </div>
+      <div class="cert-name">AWS Certified CloudOps Administrator</div>
+      <div class="cert-issuer">Amazon Web Services</div>
+      <span class="cert-level level-associate">Associate</span>
+    </div>
+
+    <!-- CCNA -->
+    <div class="cert-card">
+      <div class="badge-icon badge-cisco">
+        <svg class="badge-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cisco-style bars -->
+          <rect x="46" y="20" width="8" height="22" rx="2" fill="#1BA0D7"/>
+          <rect x="30" y="30" width="8" height="18" rx="2" fill="#1BA0D7"/>
+          <rect x="62" y="30" width="8" height="18" rx="2" fill="#1BA0D7"/>
+          <rect x="14" y="38" width="8" height="12" rx="2" fill="#1BA0D7"/>
+          <rect x="78" y="38" width="8" height="12" rx="2" fill="#1BA0D7"/>
+          <text x="50" y="72" text-anchor="middle" fill="#fff" font-size="13" font-family="Inter,sans-serif" font-weight="700">CCNA</text>
+          <text x="50" y="85" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="8" font-family="Inter,sans-serif">CISCO</text>
+        </svg>
+      </div>
+      <div class="cert-name">CCNA</div>
+      <div class="cert-issuer">Cisco Systems</div>
+      <span class="cert-level level-networking">Networking</span>
+    </div>
+
+  </div>
+</div>
+    </main>
+       <footer>
+      <div class="footer">
+        <div class="first"></div>
+        <h3>Gurvinder's Portfolio</h3>
+        <div class="second"></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </div>
+      <div class="footer-rights">
+        www.gurvinderportfolio.com | All rights reserved
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Cloud Engineer", "System Administrator", "DevOps Engineer"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
