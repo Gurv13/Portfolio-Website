@@ -13,11 +13,15 @@
         margin: 0;
         padding: 0;
       }
+      /* Base styles (Mobile) */
+      body {
+        font-size: 16px;
+      }
+
       body {
         background-color: rgb(30, 88, 168);
         color: white;
         font-family: "Raleway", serif;
-        display: flex;
       }
       nav {
         display: flex;
@@ -75,6 +79,7 @@
         gap: 30px;
         align-items: start;
       }
+
 
       /* ---- Contact Info ---- */
       .info-block {
@@ -268,7 +273,7 @@
         height: 110px;
       }
 
-        footer ul li a {
+      footer ul li a {
         text-decoration: none;
         color: white;
       }
@@ -292,7 +297,6 @@
       footer .footer-rights {
         text-align: center;
       }
-    
     </style>
   </head>
   <body>
@@ -301,7 +305,7 @@
         <div class="left">Gurvinder's Portfolio</div>
         <div class="right"></div>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="contact.html">Contact Me</a></li>
         </ul>
       </nav>
@@ -382,48 +386,50 @@
       </div>
     </div>
 
-   <script>
-  async function handleSend() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    <script>
+      async function handleSend() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-    if (!name || !email || !message) {
-      alert('Please fill in all fields.');
-      return;
-    }
+        if (!name || !email || !message) {
+          alert("Please fill in all fields.");
+          return;
+        }
 
-    const btn = document.querySelector('.btn-send');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
+        const btn = document.querySelector(".btn-send");
+        btn.textContent = "Sending...";
+        btn.disabled = true;
 
-    try {
-      const response = await fetch('https://formspree.io/f/xwvrykez', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
-      });
+        try {
+          const response = await fetch("https://formspree.io/f/xwvrykez", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, message }),
+          });
 
-      if (response.ok) {
-        const msg = document.getElementById('successMsg');
-        msg.style.display = 'block';
-        document.getElementById('name').value = '';
-        document.getElementById('email').value = '';
-        document.getElementById('message').value = '';
-        setTimeout(() => { msg.style.display = 'none'; }, 4000);
-      } else {
-        alert('Something went wrong. Please try again.');
+          if (response.ok) {
+            const msg = document.getElementById("successMsg");
+            msg.style.display = "block";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+            setTimeout(() => {
+              msg.style.display = "none";
+            }, 4000);
+          } else {
+            alert("Something went wrong. Please try again.");
+          }
+        } catch (error) {
+          alert("Network error. Please check your connection.");
+        } finally {
+          btn.textContent = "Send Message →";
+          btn.disabled = false;
+        }
       }
-    } catch (error) {
-      alert('Network error. Please check your connection.');
-    } finally {
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-    }
-  }
-</script>
+    </script>
 
-      <footer>
+    <footer>
       <div class="footer">
         <div class="first"></div>
         <h3>Gurvinder's Portfolio</h3>
